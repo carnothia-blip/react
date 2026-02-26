@@ -1,8 +1,9 @@
 import {} from "react";
 import { Nav } from "./Nav";
 export default function App() {
-  return;
+  return(
   <>
     <Nav />
-  </>;
+  </>
+  );
 }
