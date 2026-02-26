@@ -1,2 +1,8 @@
-import {} from 'react'
-export default function App (){return(<><div>App</div></>)}
+import {} from "react";
+import { Nav } from "./Nav";
+export default function App() {
+  return;
+  <>
+    <Nav />
+  </>;
+}
