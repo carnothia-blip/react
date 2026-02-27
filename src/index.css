@@ -1,20 +1,71 @@
-/* nav */
+/* Nav styles */
+.nav-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 50;
+}
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#4f46e5,#06b6d4);
+  box-shadow: 0 4px 12px rgba(15,23,42,0.08);
+  flex-shrink: 0;
+}
+.logo-text {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 16px;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-cta .btn {
+  background: #0f172a;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .nav-inner { padding: 12px 16px; }
+  .logo-text { display: none; }
+}
 
-*{box-sizing: border-box;}
+/* Prevent page content from being hidden under fixed nav */
+.app.container {
+  padding-top: 99px;
+}
 
-/* 오토레이아웃 */
-nav{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-align-items: center;
-align-content: flex-start;
-padding: 32px 48px;
-gap: 0px 24px;
-
-width: 1200px;
-height: 99px;
-
-background: #FFFFFF;
-border-bottom: 1px solid #D9D9D9;
+@media (max-width: 600px) {
+  .app.container { padding-top: 68px; }
 }
